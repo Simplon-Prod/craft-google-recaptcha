@@ -1,5 +1,5 @@
 {{ div|raw }}
-<script type="text/javascript">
+<script type="text/javascript" {% if nonce ?? null %}nonce="{{ nonce }}"{% endif %}>
     var {{ callbackName }} = function() {
         var widgetId = grecaptcha.render("{{ id }}", {
             sitekey: "{{ siteKey }}",
